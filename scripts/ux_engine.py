@@ -214,6 +214,11 @@ def audit_single_file(target):
         if 'bulk' not in content.lower() and 'selected' not in content.lower():
             findings.append((0, 'Interaction', 'Checkboxes detected without bulk action bar. Bulk selection requires an active action surface.'))
 
+    # Rule 10: Solid white badge or select pills in dark mode
+    if 'dark' in content.lower():
+        if re.search(r'(badge|stage|select|pill)[^;}]*(bg-white|#ffffff|#fff|background:\s*white)', content.lower()):
+            findings.append((0, 'Dark Mode', 'Solid white badge or dropdown pill detected in dark mode. Use 15% tinted surface with colored border.'))
+
     print("=" * 72)
     print(f"UX ENGINE AUDIT: {target}")
     print("=" * 72)

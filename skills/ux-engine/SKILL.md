@@ -116,12 +116,33 @@ python3 scripts/ux_engine.py checklist
 
 ---
 
-## Senior UI Polish Rules (Preventing AI Tells)
+## Universal Senior UI Polish Rules (Cross-Domain Standard)
 
-1. **Chart-to-Legend Integrity ()**: Every color in a chart legend must exist as a plotted series on the canvas. Never render an orphan legend item that has no visible data representation.
-2. **Numeric Tabular Alignment ()**: All monetary and numeric table columns must be right-aligned. Use  to ensure decimal and comma alignment across rows.
-3. **Badge Contrast in Dark Mode ()**: Never render light gray background badges with white text in dark mode. Badges must maintain a 4.5:1 WCAG AA contrast ratio using tinted dark surfaces with calibrated foreground colors.
-4. **Interactive vs Static Affordance ()**: Filter chips must look distinctly clickable, whereas status badges must look non-interactive.
-5. **Metric Card Symmetry**: Peer metric cards in a grid must maintain equal visual weight. If one tile features a sparkline, all peer tiles must feature sparklines or equivalent data density.
-6. **Bulk Action Surface ()**: Data tables with multi-select checkboxes must provide a floating or header-replacing bulk action bar when items are selected.
-7. **Accessible Identity**: Table user avatars must include visible text names or accessible tooltips. Never render bare images without accessible text.
+These universal rules apply to any application across all domains (SaaS, Fintech, E-commerce, Healthcare, Developer Tools, Analytics, Consumer Web, and Mobile).
+
+1. **Universal Dark Mode Badge & Select Pill Formula**:
+   Never render solid white pills with light text in dark mode. Across all domains, status badges, filter chips, and dropdown select pills must follow a calibrated tint-and-border system:
+   - **Neutral (Draft, Inactive, Default)**: 12-15% slate surface, 30% border, slate-300 text (`rgba(148, 163, 184, 0.15)`, border `rgba(148, 163, 184, 0.30)`, text `#CBD5E1`).
+   - **Info (Active, Review, Processing)**: 12-15% blue surface, 30% border, blue-400 text (`rgba(59, 130, 246, 0.15)`, border `rgba(59, 130, 246, 0.30)`, text `#60A5FA`).
+   - **Accent (Specialized, Premium, Beta)**: 12-15% purple surface, 30% border, purple-300 text (`rgba(168, 85, 247, 0.15)`, border `rgba(168, 85, 247, 0.30)`, text `#C084FC`).
+   - **Warning (Pending, In Progress, Review)**: 12-15% amber surface, 30% border, amber-300 text (`rgba(245, 158, 11, 0.15)`, border `rgba(245, 158, 11, 0.30)`, text `#FBBF24`).
+   - **Success (Completed, Live, Verified)**: 12-15% emerald surface, 30% border, emerald-400 text (`rgba(16, 185, 129, 0.15)`, border `rgba(16, 185, 129, 0.30)`, text `#34D399`).
+   - **Danger (Failed, Blocked, Critical)**: 12-15% rose surface, 30% border, rose-400 text (`rgba(244, 63, 94, 0.15)`, border `rgba(244, 63, 94, 0.30)`, text `#FB7185`).
+
+2. **Numeric Tabular Alignment**:
+   In any table or list (financial balances, inventory counts, metric quotas, timestamps), right-align numeric columns and enforce `font-variant-numeric: tabular-nums` so decimal points and digit positions align for scanning.
+
+3. **Chart-to-Legend Visual Parity**:
+   Every entry in a chart legend must represent a visible mark on the canvas. Never include orphan metrics in a chart legend that do not have a corresponding visual series or axis.
+
+4. **Interactive Affordance Distinction**:
+   Filter chips, action triggers, and dropdown buttons must look clickable (distinct hover states, chevrons, cursor pointer), while static informational badges must have subdued non-interactive styling.
+
+5. **Peer Metric Card Symmetry**:
+   Peer tiles in a dashboard or overview grid must maintain visual balance. If one card features trend micro-charts or sparklines, all sibling cards must maintain equal graphic density.
+
+6. **Bulk Action Surface**:
+   Any table or grid that includes row-selection checkboxes must provide a dedicated bulk action bar (floating bar or header replacement) that activates upon selection.
+
+7. **Accessible Identification**:
+   User avatars, team badges, and status icons must always provide visible text labels, initials, or accessible tooltips rather than relying exclusively on bare images.
