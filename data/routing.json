@@ -1,0 +1,1011 @@
+{
+  "settings-page": {
+    "name": "Settings page",
+    "keywords": [
+      "settings",
+      "preferences",
+      "configuration",
+      "account settings",
+      "profile settings"
+    ],
+    "primary": [
+      "settings-system",
+      "toggle-anatomy",
+      "form-field-states",
+      "autosave-ux"
+    ],
+    "secondary": [
+      "destructive-actions",
+      "disabled-buttons",
+      "dark-mode-surfaces"
+    ],
+    "anti_patterns": [
+      "Modal dialogs for single toggle changes",
+      "Silent save without visual confirmation",
+      "Disabled buttons without explanatory tooltips"
+    ],
+    "required_states": [
+      "default",
+      "saving",
+      "saved",
+      "error",
+      "offline"
+    ]
+  },
+  "dashboard": {
+    "name": "Dashboard / admin home",
+    "keywords": [
+      "dashboard",
+      "admin",
+      "metrics",
+      "analytics",
+      "overview",
+      "kpi"
+    ],
+    "primary": [
+      "de-ai-dashboard",
+      "number-formatting",
+      "charts-that-lie",
+      "loading-states-system",
+      "empty-states"
+    ],
+    "secondary": [
+      "skeleton-loading",
+      "notification-badge",
+      "avatar-system"
+    ],
+    "anti_patterns": [
+      "Truncated chart baseline (misleading scale)",
+      "Generic skeletons that pop layout",
+      "Overcrowded card grids without visual hierarchy"
+    ],
+    "required_states": [
+      "loading",
+      "populated",
+      "empty",
+      "error",
+      "realtime-update"
+    ]
+  },
+  "data-table": {
+    "name": "Data table / list of records",
+    "keywords": [
+      "table",
+      "data table",
+      "grid",
+      "records",
+      "list view",
+      "spreadsheet"
+    ],
+    "primary": [
+      "data-table-system",
+      "responsive-table",
+      "bulk-actions",
+      "pagination",
+      "empty-states"
+    ],
+    "secondary": [
+      "inline-editing",
+      "context-menu",
+      "filter-chips",
+      "search-experience-system",
+      "text-truncation"
+    ],
+    "anti_patterns": [
+      "Horizontal scrolling on mobile without column prioritization",
+      "Bulk checkbox without indeterminate dash",
+      "Offset pagination on rapidly mutating data"
+    ],
+    "required_states": [
+      "loading",
+      "empty",
+      "populated",
+      "selection-active",
+      "sorted",
+      "filtered"
+    ]
+  },
+  "form": {
+    "name": "Form (any)",
+    "keywords": [
+      "form",
+      "input",
+      "submit",
+      "fields",
+      "edit form"
+    ],
+    "primary": [
+      "form-field-states",
+      "form-validation-timing",
+      "microcopy",
+      "double-submit-guard"
+    ],
+    "secondary": [
+      "input-masking",
+      "otp-input",
+      "password-field-ux",
+      "date-pickers",
+      "range-sliders",
+      "focus-states"
+    ],
+    "anti_patterns": [
+      "Validating on every keystroke before user finishes typing",
+      "Floating labels that vanish or displace layout",
+      "Generic Submit button copy"
+    ],
+    "required_states": [
+      "default",
+      "focus",
+      "error",
+      "success",
+      "disabled",
+      "loading"
+    ]
+  },
+  "long-form-onboarding": {
+    "name": "Long form (7+ fields) / onboarding",
+    "keywords": [
+      "onboarding",
+      "wizard",
+      "multi-step",
+      "stepper",
+      "registration wizard",
+      "survey"
+    ],
+    "primary": [
+      "stepper-wizard",
+      "form-field-states",
+      "zeigarnik-effect",
+      "peak-end-rule"
+    ],
+    "secondary": [
+      "autosave-ux",
+      "microcopy"
+    ],
+    "anti_patterns": [
+      "Single giant scrolling form without progress indication",
+      "Losing progress on accidental navigation",
+      "Vague step labels"
+    ],
+    "required_states": [
+      "step-active",
+      "step-completed",
+      "step-upcoming",
+      "validating",
+      "saving"
+    ]
+  },
+  "auth-login-signup": {
+    "name": "Sign-up / login",
+    "keywords": [
+      "login",
+      "signin",
+      "signup",
+      "register",
+      "auth",
+      "authentication"
+    ],
+    "primary": [
+      "password-field-ux",
+      "form-validation-timing",
+      "microcopy",
+      "otp-input"
+    ],
+    "secondary": [
+      "focus-states",
+      "error-states"
+    ],
+    "anti_patterns": [
+      "Hidden password requirements until after submit",
+      "No show/hide password toggle",
+      "Locking out without clear recovery"
+    ],
+    "required_states": [
+      "default",
+      "focus",
+      "validating",
+      "submitting",
+      "error"
+    ]
+  },
+  "checkout-payment": {
+    "name": "Checkout / payment",
+    "keywords": [
+      "checkout",
+      "payment",
+      "cart",
+      "billing",
+      "subscribe",
+      "purchase",
+      "credit card"
+    ],
+    "primary": [
+      "input-masking",
+      "double-submit-guard",
+      "behind-the-button",
+      "error-states",
+      "peak-end-rule"
+    ],
+    "secondary": [
+      "stepper-wizard",
+      "loading-states-system"
+    ],
+    "anti_patterns": [
+      "Double-charging on multiple clicks",
+      "Unformatted credit card numbers",
+      "Hidden fees surfacing at final step"
+    ],
+    "required_states": [
+      "ready",
+      "validating",
+      "processing",
+      "success",
+      "card-declined"
+    ]
+  },
+  "pricing-section": {
+    "name": "Pricing section",
+    "keywords": [
+      "pricing",
+      "plans",
+      "tier",
+      "subscription plans",
+      "compare plans"
+    ],
+    "primary": [
+      "von-restorff",
+      "decoy-effect",
+      "pricing-psychology",
+      "perfect-card"
+    ],
+    "secondary": [
+      "serial-position",
+      "microcopy"
+    ],
+    "anti_patterns": [
+      "Equal visual emphasis on all tiers",
+      "Obscuring annual vs monthly savings",
+      "Overwhelming feature laundry lists"
+    ],
+    "required_states": [
+      "monthly",
+      "annual",
+      "hover-feature",
+      "recommended-highlighted"
+    ]
+  },
+  "landing-page": {
+    "name": "Landing page",
+    "keywords": [
+      "landing page",
+      "homepage",
+      "hero",
+      "marketing",
+      "value proposition"
+    ],
+    "primary": [
+      "landing-page-skeleton",
+      "de-ai-landing-hero",
+      "visual-hierarchy",
+      "perfect-card",
+      "reverse-engineered-linear"
+    ],
+    "secondary": [
+      "scroll-driven-animations",
+      "gradient-design",
+      "typography-system"
+    ],
+    "anti_patterns": [
+      "Generic AI marketing buzzwords without clear product proof",
+      "Centered low-contrast hero text with zero hierarchy",
+      "Multi-paragraph walls of text"
+    ],
+    "required_states": [
+      "initial-load",
+      "scrolled",
+      "interactive-preview",
+      "cta-focused"
+    ]
+  },
+  "modal-dialog-drawer": {
+    "name": "Modal / dialog / drawer",
+    "keywords": [
+      "modal",
+      "dialog",
+      "drawer",
+      "popup",
+      "sheet",
+      "overlay"
+    ],
+    "primary": [
+      "modal-hierarchy",
+      "modal-backdrop",
+      "animation-timing",
+      "focus-states"
+    ],
+    "secondary": [
+      "destructive-actions",
+      "bottom-sheets"
+    ],
+    "anti_patterns": [
+      "Missing focus trap",
+      "Unclosable with ESC key or backdrop tap",
+      "Disorienting layout pop without backdrop fade"
+    ],
+    "required_states": [
+      "opening",
+      "open",
+      "closing",
+      "focus-trapped"
+    ]
+  },
+  "destructive-action": {
+    "name": "Destructive action (delete, cancel, remove)",
+    "keywords": [
+      "delete",
+      "destroy",
+      "cancel subscription",
+      "remove",
+      "purge",
+      "archive"
+    ],
+    "primary": [
+      "destructive-actions",
+      "undo-ux",
+      "disabled-buttons"
+    ],
+    "secondary": [
+      "modal-hierarchy",
+      "toast-notifications"
+    ],
+    "anti_patterns": [
+      "Accidental one-click delete without friction or undo",
+      "Primary color used for destructive button",
+      "Misleading cancel labels"
+    ],
+    "required_states": [
+      "idle",
+      "confirmation-required",
+      "deleting",
+      "undo-toast-active"
+    ]
+  },
+  "navigation-shell": {
+    "name": "Navigation / app shell",
+    "keywords": [
+      "navigation",
+      "navbar",
+      "sidebar",
+      "app shell",
+      "header",
+      "menu"
+    ],
+    "primary": [
+      "navigation-patterns",
+      "tabs-system",
+      "focus-states"
+    ],
+    "secondary": [
+      "bottom-sheets",
+      "command-palette",
+      "scroll-restoration",
+      "resizable-panels"
+    ],
+    "anti_patterns": [
+      "Hamburger menu on desktop",
+      "Bottom nav with more than 5 tabs",
+      "Lost scroll position on navigation"
+    ],
+    "required_states": [
+      "expanded",
+      "collapsed",
+      "active-indicator-sliding",
+      "mobile-sheet-open"
+    ]
+  },
+  "search-filters": {
+    "name": "Search / filters",
+    "keywords": [
+      "search",
+      "filter",
+      "filter chips",
+      "facet",
+      "query",
+      "auto-suggest"
+    ],
+    "primary": [
+      "search-experience-system",
+      "filter-chips",
+      "empty-states"
+    ],
+    "secondary": [
+      "command-palette",
+      "loading-states-system",
+      "pagination"
+    ],
+    "anti_patterns": [
+      "Search with no clear empty state or suggestions",
+      "Filter dropdowns that reset on outside click",
+      "Unresponsive filter chips"
+    ],
+    "required_states": [
+      "empty",
+      "typing",
+      "results-loading",
+      "results-rendered",
+      "zero-results"
+    ]
+  },
+  "notifications-feedback": {
+    "name": "Notifications / feedback",
+    "keywords": [
+      "notification",
+      "toast",
+      "alert",
+      "banner",
+      "feedback",
+      "snack-bar"
+    ],
+    "primary": [
+      "notification-system",
+      "toast-notifications",
+      "notification-badge",
+      "undo-ux"
+    ],
+    "secondary": [
+      "optimistic-ui",
+      "error-states"
+    ],
+    "anti_patterns": [
+      "Stacking 10 toasts over interactive buttons",
+      "Modal alerts for trivial info",
+      "Toasts with no dismiss button"
+    ],
+    "required_states": [
+      "queued",
+      "visible",
+      "dismissing",
+      "action-undo"
+    ]
+  },
+  "buttons": {
+    "name": "Buttons (primary CTA, any button)",
+    "keywords": [
+      "button",
+      "cta",
+      "action button",
+      "submit button",
+      "buy button"
+    ],
+    "primary": [
+      "perfect-button",
+      "button-feedback",
+      "disabled-buttons",
+      "behind-the-button"
+    ],
+    "secondary": [
+      "buy-button-css",
+      "hover-trap",
+      "double-submit-guard",
+      "fitts-law"
+    ],
+    "anti_patterns": [
+      "Layout shift on hover",
+      "Disabled button without explanation of why",
+      "No active/pressed state feedback"
+    ],
+    "required_states": [
+      "idle",
+      "hover",
+      "active",
+      "focus",
+      "loading",
+      "disabled"
+    ]
+  },
+  "file-upload": {
+    "name": "File upload",
+    "keywords": [
+      "upload",
+      "file upload",
+      "dropzone",
+      "attachment",
+      "media upload"
+    ],
+    "primary": [
+      "file-upload-ux",
+      "error-states",
+      "loading-states-system"
+    ],
+    "secondary": [
+      "undo-ux",
+      "drag-and-drop-tips"
+    ],
+    "anti_patterns": [
+      "Dropping file without instant visual drop feedback",
+      "Cryptic error when file is over size limit",
+      "No file removal option before submit"
+    ],
+    "required_states": [
+      "empty-dropzone",
+      "drag-over",
+      "uploading",
+      "preview",
+      "error-recovery"
+    ]
+  },
+  "drag-drop-kanban": {
+    "name": "Drag and drop / kanban / reorder",
+    "keywords": [
+      "kanban",
+      "drag and drop",
+      "dnd",
+      "reorder",
+      "sortable list"
+    ],
+    "primary": [
+      "drag-and-drop",
+      "drag-and-drop-tips",
+      "optimistic-ui"
+    ],
+    "secondary": [
+      "live-cursors",
+      "scroll-restoration"
+    ],
+    "anti_patterns": [
+      "No drop indicator placeholder",
+      "Snapping back without smooth transition",
+      "No keyboard accessible reordering"
+    ],
+    "required_states": [
+      "idle",
+      "dragging",
+      "target-highlighted",
+      "optimistic-reorder"
+    ]
+  },
+  "chat-messaging": {
+    "name": "Chat / messaging / comments",
+    "keywords": [
+      "chat",
+      "messaging",
+      "thread",
+      "comments",
+      "messages",
+      "direct message"
+    ],
+    "primary": [
+      "chat-ui-system",
+      "avatar-system",
+      "notification-badge",
+      "text-truncation"
+    ],
+    "secondary": [
+      "live-cursors",
+      "empty-states"
+    ],
+    "anti_patterns": [
+      "Jumping scroll position on new incoming message",
+      "Unclear read vs unread indicators",
+      "No typing indicator"
+    ],
+    "required_states": [
+      "empty",
+      "typing",
+      "sending-optimistic",
+      "sent",
+      "delivered",
+      "read"
+    ]
+  },
+  "calendar-scheduling": {
+    "name": "Calendar / scheduling",
+    "keywords": [
+      "calendar",
+      "schedule",
+      "appointment",
+      "booking",
+      "week view",
+      "time slot"
+    ],
+    "primary": [
+      "calendar-week-view",
+      "date-pickers",
+      "drag-and-drop"
+    ],
+    "secondary": [
+      "empty-states",
+      "tooltip-design"
+    ],
+    "anti_patterns": [
+      "Unclear timezone indication",
+      "Tiny tap targets on mobile calendar",
+      "Ambiguous booked vs available slots"
+    ],
+    "required_states": [
+      "empty",
+      "selected-slot",
+      "booking-in-progress",
+      "confirmed"
+    ]
+  },
+  "cards-grids": {
+    "name": "Cards / grids of items",
+    "keywords": [
+      "card",
+      "cards",
+      "grid",
+      "card hover",
+      "product card",
+      "content card"
+    ],
+    "primary": [
+      "perfect-card",
+      "card-hover-anatomy",
+      "card-spacing-fixes",
+      "border-radius-system"
+    ],
+    "secondary": [
+      "depth-layers",
+      "shadow-elevation",
+      "hover-trap",
+      "proximity-rule"
+    ],
+    "anti_patterns": [
+      "Non-concentric inner/outer border radii",
+      "Scale transform shifting neighboring cards",
+      "Equal padding between unrelated card text"
+    ],
+    "required_states": [
+      "idle",
+      "hover-lifted",
+      "selected",
+      "loading-skeleton"
+    ]
+  },
+  "loading-waiting": {
+    "name": "Loading / waiting states",
+    "keywords": [
+      "loading",
+      "waiting",
+      "spinner",
+      "skeleton",
+      "progress indicator"
+    ],
+    "primary": [
+      "loading-states-system",
+      "skeleton-loading",
+      "perceived-performance",
+      "doherty-threshold"
+    ],
+    "secondary": [
+      "optimistic-ui",
+      "behind-the-button"
+    ],
+    "anti_patterns": [
+      "Applying generic skeleton to unpredictable length content",
+      "No timeout or retry after prolonged loading",
+      "Blocking full UI on background fetch"
+    ],
+    "required_states": [
+      "immediate-spinner",
+      "skeleton-shimmer",
+      "progress-bar",
+      "timed-out"
+    ]
+  },
+  "empty-error-states": {
+    "name": "Empty / error states",
+    "keywords": [
+      "empty state",
+      "error state",
+      "no data",
+      "crash screen",
+      "failed"
+    ],
+    "primary": [
+      "empty-states",
+      "error-states"
+    ],
+    "secondary": [
+      "microcopy",
+      "undo-ux"
+    ],
+    "anti_patterns": [
+      "Blank screen without explanation",
+      "Technical stack trace shown to non-technical users",
+      "Error screen with no reload/home button"
+    ],
+    "required_states": [
+      "empty-with-cta",
+      "inline-error",
+      "full-page-error",
+      "offline-cached"
+    ]
+  },
+  "mobile-screen": {
+    "name": "Mobile screen",
+    "keywords": [
+      "mobile",
+      "responsive",
+      "touch",
+      "thumb zone",
+      "viewport mobile"
+    ],
+    "primary": [
+      "bottom-sheets",
+      "swipe-actions",
+      "hover-trap",
+      "pull-to-refresh",
+      "fitts-law"
+    ],
+    "secondary": [
+      "responsive-table",
+      "navigation-patterns"
+    ],
+    "anti_patterns": [
+      "Touch targets below 44x44px",
+      "Inputs smaller than 16px causing iOS zoom",
+      "Relying exclusively on hover states"
+    ],
+    "required_states": [
+      "portrait",
+      "landscape",
+      "touch-active",
+      "pull-refreshing"
+    ]
+  },
+  "dark-mode-theming": {
+    "name": "Dark mode / theming",
+    "keywords": [
+      "dark mode",
+      "theme",
+      "color scheme",
+      "light mode",
+      "contrast"
+    ],
+    "primary": [
+      "dark-mode-surfaces",
+      "color-accessibility",
+      "depth-layers"
+    ],
+    "secondary": [
+      "design-tokens",
+      "gradient-design",
+      "glassmorphism"
+    ],
+    "anti_patterns": [
+      "Inverting pure black #000000",
+      "Low contrast muted text below 4.5:1",
+      "Invisible card borders in light mode"
+    ],
+    "required_states": [
+      "light",
+      "dark",
+      "system-auto"
+    ]
+  },
+  "typography-hierarchy": {
+    "name": "Typography / hierarchy pass",
+    "keywords": [
+      "typography",
+      "font",
+      "heading",
+      "text hierarchy",
+      "line-height",
+      "modular scale"
+    ],
+    "primary": [
+      "typography-system",
+      "visual-hierarchy",
+      "pop-out-effect",
+      "serial-position"
+    ],
+    "secondary": [
+      "golden-ratio",
+      "proximity-rule",
+      "whitespace-types",
+      "gestalt-laws"
+    ],
+    "anti_patterns": [
+      "Arbitrary font sizes that clash by 1-2px",
+      "Too many competing bold weights",
+      "Unreadable line-length over 75 characters"
+    ],
+    "required_states": [
+      "display",
+      "heading",
+      "body",
+      "caption",
+      "code"
+    ]
+  },
+  "design-system-tokens": {
+    "name": "Design system / tokens",
+    "keywords": [
+      "design system",
+      "tokens",
+      "primitives",
+      "ui kit",
+      "token architecture"
+    ],
+    "primary": [
+      "design-tokens",
+      "design-system-build",
+      "atomic-design",
+      "border-radius-system",
+      "typography-system"
+    ],
+    "secondary": [
+      "design-system-kit",
+      "whitespace-types",
+      "color-harmony",
+      "icon-design-rules"
+    ],
+    "anti_patterns": [
+      "Hardcoded hex colors in components",
+      "Random arbitrary pixel padding",
+      "Inconsistent icon viewBox dimensions"
+    ],
+    "required_states": [
+      "token-definitions",
+      "fallback-chains",
+      "semantic-aliases"
+    ]
+  },
+  "motion-animation": {
+    "name": "Motion / animation pass",
+    "keywords": [
+      "motion",
+      "animation",
+      "transition",
+      "timing",
+      "easing",
+      "keyframes"
+    ],
+    "primary": [
+      "animation-timing",
+      "easing-curves",
+      "card-hover-anatomy"
+    ],
+    "secondary": [
+      "scroll-driven-animations",
+      "button-feedback"
+    ],
+    "anti_patterns": [
+      "Linear easing on entry transitions",
+      "Over 400ms duration for micro-interactions",
+      "Ignoring prefers-reduced-motion"
+    ],
+    "required_states": [
+      "entering",
+      "idle",
+      "exiting",
+      "reduced-motion-fallback"
+    ]
+  },
+  "rating-reviews": {
+    "name": "Rating / reviews",
+    "keywords": [
+      "rating",
+      "reviews",
+      "stars",
+      "feedback rating",
+      "testimonials"
+    ],
+    "primary": [
+      "star-rating",
+      "microcopy"
+    ],
+    "secondary": [
+      "empty-states"
+    ],
+    "anti_patterns": [
+      "No intermediate hover preview before selecting stars",
+      "Ambiguous rating criteria",
+      "Unresponsive stars on mobile tap"
+    ],
+    "required_states": [
+      "unrated",
+      "hover-preview",
+      "rated",
+      "review-submitted"
+    ]
+  },
+  "tooltips-dropdowns": {
+    "name": "Tooltips / context menus / dropdowns",
+    "keywords": [
+      "tooltip",
+      "context menu",
+      "dropdown",
+      "popover",
+      "hovercard"
+    ],
+    "primary": [
+      "tooltip-design",
+      "context-menu",
+      "dropdown-design"
+    ],
+    "secondary": [
+      "z-index-mastery",
+      "focus-states",
+      "css-has-selector"
+    ],
+    "anti_patterns": [
+      "Tooltips clipping outside viewport",
+      "Multi-paragraph essays in tooltips",
+      "Dropdown closing prematurely before click"
+    ],
+    "required_states": [
+      "closed",
+      "open",
+      "flipped-boundary",
+      "item-focused"
+    ]
+  },
+  "color-palette-choice": {
+    "name": "Colour / palette choice",
+    "keywords": [
+      "color",
+      "palette",
+      "color harmony",
+      "hue",
+      "saturation",
+      "brand color"
+    ],
+    "primary": [
+      "color-harmony",
+      "color-accessibility",
+      "gradient-design"
+    ],
+    "secondary": [
+      "rounded-shapes",
+      "radius-spectrum",
+      "optical-corrections"
+    ],
+    "anti_patterns": [
+      "Clashing saturated complementary colors",
+      "Using color alone to communicate system status",
+      "Muddy gradients with conflicting lightness"
+    ],
+    "required_states": [
+      "palette-defined",
+      "wcag-verified",
+      "tint-steps-calibrated"
+    ]
+  },
+  "ai-made-remediation": {
+    "name": "This looks AI-made remediation",
+    "keywords": [
+      "ai-made",
+      "de-ai",
+      "generic",
+      "unprofessional",
+      "template look",
+      "sloppy"
+    ],
+    "primary": [
+      "de-ai-landing-hero",
+      "de-ai-dashboard",
+      "reverse-engineered-linear",
+      "visual-hierarchy",
+      "perfect-card"
+    ],
+    "secondary": [
+      "typography-system",
+      "whitespace-types"
+    ],
+    "anti_patterns": [
+      "Floating pastel blobs with no purpose",
+      "Centered low-contrast generic slogans",
+      "Emojis used as UI feature icons",
+      "Equal padding everywhere with no rhythm"
+    ],
+    "required_states": [
+      "intent-established",
+      "hierarchy-sharpened",
+      "proof-grounded",
+      "states-complete"
+    ]
+  }
+}

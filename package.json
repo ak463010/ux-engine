@@ -1,0 +1,26 @@
+{
+  "name": "ux-engine-claude-plugin",
+  "version": "1.0.0",
+  "description": "UX Engine by Designmotionhq: Senior UI/UX intelligence, 112 tactical patterns, and production-grade AppGuard system.",
+  "main": "scripts/ux_engine.py",
+  "bin": {
+    "ux-engine": "scripts/ux_engine.py"
+  },
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests",
+    "validate": "claude plugin validate .",
+    "route": "python3 scripts/ux_engine.py route",
+    "audit": "python3 scripts/ux_engine.py audit",
+    "pattern": "python3 scripts/ux_engine.py pattern"
+  },
+  "keywords": [
+    "claude-plugin",
+    "ux",
+    "ui",
+    "designmotionhq",
+    "ux-engine",
+    "design-system"
+  ],
+  "author": "DesignMotionHQ",
+  "license": "MIT"
+}

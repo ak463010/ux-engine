@@ -1,0 +1,117 @@
+/**
+ * DesignMotionHQ UX Engine: Semantic Token Architecture
+ * Standardized OKLCH colors, concentric radii, modular typography, and calibrated motion curves.
+ */
+
+:root {
+  /* ==========================================================================
+     Color Primitives & Semantic Aliases (OKLCH Base)
+     ========================================================================== */
+  --color-bg-base: oklch(0.985 0.002 247.8);
+  --color-bg-surface: oklch(1 0 0);
+  --color-bg-surface-elevated: oklch(0.995 0.001 247.8);
+  --color-bg-surface-sunken: oklch(0.96 0.005 247.8);
+  
+  --color-text-primary: oklch(0.18 0.02 247.8);     /* Contrast >= 12:1 */
+  --color-text-secondary: oklch(0.42 0.03 247.8);   /* Contrast >= 5.5:1 */
+  --color-text-muted: oklch(0.56 0.02 247.8);       /* Contrast >= 4.5:1 */
+  --color-text-disabled: oklch(0.72 0.01 247.8);
+  
+  --color-border-subtle: oklch(0.92 0.005 247.8);
+  --color-border-default: oklch(0.85 0.01 247.8);
+  --color-border-strong: oklch(0.68 0.02 247.8);
+  
+  --color-primary-base: oklch(0.55 0.18 250);
+  --color-primary-hover: oklch(0.48 0.20 250);
+  --color-primary-active: oklch(0.42 0.22 250);
+  --color-primary-fg: oklch(0.99 0.002 250);
+
+  --color-success-base: oklch(0.62 0.16 145);
+  --color-warning-base: oklch(0.72 0.16 75);
+  --color-danger-base: oklch(0.58 0.22 25);
+  --color-danger-hover: oklch(0.50 0.24 25);
+
+  /* ==========================================================================
+     Spacing Scale (4px Base Grid)
+     ========================================================================== */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ==========================================================================
+     Concentric Border Radii (Formula: R_inner = R_outer - Padding)
+     ========================================================================== */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     Elevation & Depth Shadows
+     ========================================================================== */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.06);
+
+  /* ==========================================================================
+     Motion Timing & Easing Curves (DesignMotionHQ calibrated)
+     ========================================================================== */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant: 100ms;
+  --duration-fast: 180ms;    /* Toggle, hover, tab indicators */
+  --duration-medium: 260ms;  /* Modals, drawers, card hover */
+  --duration-slow: 380ms;    /* Page transitions, full expansions */
+
+  /* ==========================================================================
+     Stacking Context (z-index scale)
+     ========================================================================== */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+  --z-max: 9999;
+}
+
+/* ==========================================================================
+   Dark Mode Surface Ladder (Near-black #0D1117 base, never pure black)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-base: oklch(0.14 0.015 250);
+    --color-bg-surface: oklch(0.18 0.018 250);
+    --color-bg-surface-elevated: oklch(0.23 0.020 250);
+    --color-bg-surface-sunken: oklch(0.11 0.012 250);
+    
+    --color-text-primary: oklch(0.96 0.005 250);
+    --color-text-secondary: oklch(0.78 0.012 250);
+    --color-text-muted: oklch(0.62 0.015 250);
+    --color-text-disabled: oklch(0.40 0.010 250);
+    
+    --color-border-subtle: oklch(0.24 0.015 250);
+    --color-border-default: oklch(0.30 0.020 250);
+    --color-border-strong: oklch(0.42 0.025 250);
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.7), 0 8px 10px -6px rgb(0 0 0 / 0.6);
+  }
+}

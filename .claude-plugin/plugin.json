@@ -1,0 +1,31 @@
+{
+  "name": "ux-engine",
+  "version": "1.0.0",
+  "description": "UX Engine by Designmotionhq: Senior UI/UX intelligence, 112 tactical patterns, 31-module routing engine, and production-grade AppGuard system.",
+  "author": {
+    "name": "DesignMotionHQ & Senior UX Engineering Team",
+    "url": "https://www.designmotionhq.com"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "designmotionhq",
+    "ux-engine",
+    "design-system",
+    "ui-patterns",
+    "app-guard",
+    "accessibility",
+    "senior-designer"
+  ],
+  "skills": [
+    "./skills/ux-engine"
+  ],
+  "commands": [
+    "./commands/ux-route.md",
+    "./commands/ux-audit.md",
+    "./commands/ux-pattern.md",
+    "./commands/ux-guard.md",
+    "./commands/ux-system.md",
+    "./commands/ux-checklist.md"
+  ]
+}
